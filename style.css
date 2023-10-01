@@ -1,0 +1,362 @@
+/*
+#d09ecf
+#569bc4
+#b7d12e
+#000b12
+#3dabe2
+#fef3f1
+
+
+
+
+
+
+*/
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Hind Guntur', sans-serif;
+    font-size: 18px;
+    height: 100%;
+    cursor: none;
+}
+
+
+
+
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+h2 {
+    font-size: 25px;
+}
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn-custom {
+    background-color:#b7d12e;
+    color:#fef3f1;
+}
+.btn-custom:hover {
+    background-color: #3dabe2;
+}
+
+.cursor-custom {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #009D9A;
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.cursor-custom::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #009D9A;
+    background: #26F6B2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+@media (pointer:coarse) {
+    .cursor-custom {
+        display: none;
+    }
+}
+
+.expand {
+    animation: anim2 0.5s;
+    background: #3dabe2;
+    border: 1px solid #3dabe2;
+}
+
+@keyframes anim2 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+hr {
+    background-color: #03333F;
+    width: 5rem;
+    height: 2px;
+    border: none;
+}
+
+
+             
+/* Header  */
+
+.navbar-custom {
+    background-color:#d09ecf;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-link {
+   color: #FFFFFF;
+}
+
+.nav-link:hover {
+   color:#3dabe2;
+}
+
+
+            /* Main */
+
+
+/*  Presentation  */
+
+.presentation {
+    height: 63vh;
+    background-color:#d09ecf;
+}
+
+.anim {
+    -webkit-animation: scale-in-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/*  About  */
+
+.about, .address {
+    border: 3px solid #3dabe2;
+    border-radius: 10px;
+}
+
+.icons-custom {
+    width: 1rem;
+}
+
+.link-custom {
+    color:#569bc4;
+    text-decoration: none;
+}
+
+.link-custom:hover {
+    color:#b7d12e;
+    text-decoration: none;
+}
+
+/*  Skills  */
+
+#skills {
+    background-color: #3dabe2;
+}
+.progress-bar {
+    background-color:#569bc4;
+}
+.progress-bar-striped {
+    background-color:#000b12;
+}
+
+/*  App  */
+
+#appli {
+    background-color:#3dabe2 ;
+}
+
+.github-icon {
+    width: 8px;
+}
+
+.badge-link {
+    color: white;
+}
+
+.badge-link:hover {
+    color: #03333F;
+    text-decoration: none;
+}
+
+.card-app {
+    background-color:#d09ecf;
+    border-radius: 10px;
+}
+
+.link-app {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.link-app:hover {
+    color:#000b12;
+     text-decoration: none;
+}
+
+/*  School  */
+
+#school {
+    background-color:#569bc4;
+}
+
+.underline-custom {
+    text-decoration: underline;
+}
+
+.school-bg {
+    background-color:#b7d12e ;
+    border-radius: 10px;
+    padding: 10px 20px 0 20px;
+    position: relative;
+    transition: all 0.4s;
+    z-index: 5;
+}
+
+.school-bg:hover {
+    transform: translateX(20px);
+}
+
+.school-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 8px;
+    background-color:#d09ecf ;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: all 0.4s;
+    z-index: -1;
+}
+
+.school-bg:hover::before {
+    width: 100%;
+}
+
+.school-bg:nth-child(1)::before {
+    background-color: #3dabe2;
+}
+.school-bg:nth-child(2)::before {
+    background-color: #d09ecf;
+}
+.school-bg:nth-child(3)::before {
+    background-color: #fef3f1;
+}
+.school-bg:nth-child(4)::before {
+     background-color: #fef3f1;
+}
+.school-bg:nth-child(5)::before {
+      background-color: #3dabe2;
+}
+
+
+/*  TRAVAILLE  */
+
+.border-work {
+    border: 3px solid #b7d12e;
+    border-radius: 10px;
+}
+
+/*  LOISIRS  */
+
+#hobbies, .alert-custom {
+    background-color: #d09ecf;
+}
+
+
+.card-hobbies {
+    background:#569bc4;
+    border: 2px solid #569bc4;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.2s ease-in;
+    color: #FFFFFF;
+}
+
+.card-hobbies:hover {
+    transform: scale(1.1);
+}
+
+
+
+/*  Footer */
+
+.footer-custom {
+    height: 10vh;
+    background-color:#fef3f1;
+}
+
+
+
+/*Contact */
+
+#contact {
+    background-color: #D3EDEA;
+    height: 83vh;
+}
+
+.form-custom {
+    border: 3px solid #3dabe2;
+    border-radius: 10px;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (min-device-width: 280px) and (max-device-width: 768px) {
+
+}
